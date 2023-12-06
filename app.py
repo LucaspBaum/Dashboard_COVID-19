@@ -28,7 +28,9 @@ select_columns = {"casosAcumulado": "Casos Acumulados",
                 "obitosNovos": "Óbitos por dia"}
 #====================
 #Instanciacao do Dash
-app = dash.Dash("__name__", external_stylesheets=[dbc.themes.CYBORG])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
+
 
 fig = px.choropleth_mapbox(df_states, locations='estado',color='casosNovos',
                             center={"lat": -16.95, "lon": -47.78}, zoom=4, 
