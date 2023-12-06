@@ -227,4 +227,4 @@ def update_location(click_data, n_clicks):
         return "BRASIL"
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
